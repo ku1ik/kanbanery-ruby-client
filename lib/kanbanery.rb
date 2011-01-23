@@ -65,6 +65,8 @@ EOS
 
   class Task < Resource
     belongs_to :column
+    self.prefix = "#{site.path}/projects/:project_id/:icebox_path"
+
     has_many :comments
     has_many :subtasks
     has_many :issues
